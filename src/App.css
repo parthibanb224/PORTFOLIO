@@ -1,38 +1,422 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Home {
+  height: 100vh;
+  position: relative;
+  display: flex;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.Home-socialMedia {
+  display: flex;
+  position: absolute;
+  bottom: 40px;
+  left: 170px;
+  cursor: pointer;
+}
+
+.socialMedia-icon {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+  background-color: inherit;
+}
+
+.Home-sideSlide {
+  width: 40%;
+  height: inherit;
+  background-color: rgb(63, 195, 55);
+
+  >.profile-img {
+    width: 350px;
+    height: 400px;
+    border-radius: 50%;
+    background-color: white;
+    margin-top: 70px;
+
+    >img {
+      border-radius: 50%;
+    }
+
+    >h1 {
+      width: 350px;
+      text-align: center;
+      margin-top: 30px;
+    }
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.Home-introSlide {
+  width: 60%;
+  height: inherit;
+  background-color: rgb(234, 234, 234);
+}
+
+.introSlide-intro {
+  margin-top: 140px;
+  width: 750px;
+  height: 300px;
+
+  >h1 {
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+
+  >h4 {
+    text-align: justify;
+    font-weight: lighter;
+  }
+}
+
+.intro-button {
+  width: 170px;
+  height: 60px;
+  border-radius: 30px;
+  border-color: green;
+  background-color: inherit;
+  color: green;
+  font-size: 20px;
+}
+
+.intro-button:hover {
+  background-color: green;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(234, 234, 234);
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.sidebar-ul {
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style-type: none;
+  font-size: 30px;
+  background-color: none;
+}
+
+.sidebar-menu-button {
+  width: 250px;
+  height: 80px;
+  border-radius: 40px;
+  border-color: green;
+  background-color: inherit;
+  color: green;
+  font-size: 20px;
+}
+
+.sidebar-menu-button:hover {
+  background-color: green;
+  color: white;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 15px;
+  right: 45px;
+  font-size: 36px;
+  margin-left: 50px;
+  background-color: inherit;
+  color: green;
+  border: none;
+}
+
+.openbtn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  cursor: pointer;
+  color: black;
+  border: none;
+  width: 70px;
+  display: block;
+}
+
+
+
+/* EDUCATION */
+
+.Education {
+  height: 100vh;
+  background-color: rgb(234, 234, 234);
+}
+
+.Education-heading {
+  padding-top: 80px;
+  margin-bottom: 50px;
+  margin-left: 140px;
+  font-weight: 900;
+  font-size: 70px;
+  color: green;
+}
+
+.Education-card {
+  margin-left: 50px;
+  margin-bottom: 30px;
+  width: 800px;
+  height: 145px;
+  border-radius: 20px;
+  background-color: rgb(182, 222, 180);
+}
+
+.Education-card:hover {
+  background-color: rgb(149, 215, 145);
+}
+
+.edu-card-content {
+  padding-left: 10px;
+}
+
+.Education-img {
+  margin-left: 100px;
+  margin-top: 120px;
+}
+
+
+/* Skills */
+
+.Skills {
+  height: 100vh;
+  background-color: rgb(234, 234, 234);
+
+  >h1 {
+    text-align: center;
+    padding-top: 150px;
+    margin-bottom: 100px;
+    font-weight: 900;
+    font-size: 70px;
+    color: green;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+.scrollButton {
+  position: fixed;
+  right: 20px;
+  bottom: 70px;
+  height: 20px;
+  font-size: 3rem;
+  cursor: pointer;
+  color: green;
+}
+
+
+/* contacts */
+
+.Contacts {
+  height: 100vh;
+  background-color: rgb(234, 234, 234);
+  position: relative;
+}
+
+.contacts-mail-model-section {
+  padding-top: 70px;
+  margin-left: 100px;
+
+  >h1 {
+    font-weight: 900;
+    font-size: 70px;
+    color: green;
+    margin-bottom: 10px;
+  }
+}
+
+.MuiOutlinedInput-notchedOutline {
+  border: 4px solid green !important;
+}
+
+.contacts-details-model-section {
+  padding-top: 240px;
+  margin-left: 120px;
+}
+
+.contact-socialMedia {
+  margin-top: 140px;
+  margin-left: 50px;
+}
+
+.contacts-image-section {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.contact-social-icon {
+  filter: grayscale(100%);
+}
+
+.contact-social-icon:hover {
+  filter: grayscale(0%);
+}
+
+
+/* Projects */
+
+.Projects {
+  height: 100vh;
+  background-color: rgb(234, 234, 234);
+
+  >h1 {
+    font-weight: 900;
+    font-size: 70px;
+    color: green;
+    text-align: center;
+    padding-top: 60px;
+  }
+}
+
+.projects-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+}
+
+.project-card {
+  box-shadow: 5px 10px 18px #888888;
+}
+
+.project-view-button {
+  margin-left: 1300px;
+  border: 1px;
+  background-color: rgb(87, 215, 80);
+  border-radius: 25px;
+  margin-top: 35px;
+  font-weight: 600;
+  padding-inline-start: 10px;
+  width: 160px;
+}
+
+.project-view-button:hover {
+  color: white;
+}
+
+
+/* AllProjects */
+
+.AllProjects {
+  background-color: rgb(234, 234, 234);
+
+  >h1 {
+    font-weight: 900;
+    font-size: 70px;
+    color: green;
+    text-align: center;
+    padding-top: 30px;
+  }
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+  /* For mobile phones: */
+  * {
+    background-color: rgb(234, 234, 234);
+    height: auto;
+  }
+
+  .Home-sideSlide {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .Home-introSlide {
+    width: 100%;
+    height: auto;
+  }
+
+  .Home {
+    display: block;
+    width: auto;
+    height: auto;
+
+    >.profile-img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-color: white;
+      margin-top: 70px;
+      >img{
+        width: 100px;
+        border-radius: 10%;
+      }
+    }
+  }
+
+  .Home-socialMedia {
+    display: none;
+  }
+
+  .Education {
+    margin-top: 200px;
+    width: auto;
+    height: 100vh;
+    display: inline-block;
+  }
+
+  .Education-img {
+    display: none;
+  }
+
+  .Projects {
+    height: auto;
+  }
+
+  .projects-all {
+    display: block;
+    margin: auto;
+  }
+
+  .project-card {
+    display: inline-block;
+    margin-left: 100px;
+    margin-top: 40px;
+  }
+
+  .Skills {
+    width: auto;
+  }
+
+  .Contacts {
+    width: auto;
+    height: 100vh;
+    display: inline-flex;
+  }
+
+  .contacts-mail-model-section {
+    width: auto;
+    height: 100vh;
+  }
+
+  .contacts-image-section {
+    display: none;
+  }
+
+  .contacts-details-model-section {
+    display: none;
+  }
+
+  .Education-card {
+    width: auto;
   }
 }
